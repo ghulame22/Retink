@@ -20,6 +20,7 @@ body {
 .logo {
   margin: 1rem 0rem;
   height: 33px;
+  cursor: pointer;
   width: 160px;
 }
 #mainLogo {
@@ -41,9 +42,9 @@ h1 {
   position: absolute;
   width: 610px;
   height: 783px;
-  z-index: -2;
-  right: 2px;
-  top: -47px;
+  z-index: -1;
+  right: 1px;
+  top: -100px;
 }
 .content1 {
   margin-top: -1rem;
@@ -72,6 +73,7 @@ h1 {
   color: #7e1cfe;
   border-bottom: 1px solid #000;
   text-align: center;
+  cursor: pointer;
 }
 .inputgroup1::placeholder {
   color: #7e1cfe;
@@ -87,6 +89,13 @@ h1 {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 20px;
   font-size: 16px;
+  cursor: pointer;
+}
+.btn1:hover {
+  -ms-transform: scale(1.01); /* IE 9 */
+  -webkit-transform: scale(1.01); /* Safari 3-8 */
+  transition: transform 0.5s;
+  transform: scale(1.01);
 }
 .btn2 {
   border-radius: 20px;
@@ -96,8 +105,15 @@ h1 {
   border: 2px solid #7e1cfe;
   margin-left: 77px;
 }
+.btn2:hover {
+  -ms-transform: scale(1.01); /* IE 9 */
+  -webkit-transform: scale(1.01); /* Safari 3-8 */
+  transition: transform 0.3s;
+  transform: scale(1.01);
+}
 .btn2 > span {
   color: #0085ff;
+  cursor: pointer;
   text-decoration: underline;
 }
 .container2 {
@@ -116,6 +132,7 @@ h1 {
   width: 50%;
   height: 415px;
   margin-top: 77px;
+  box-shadow: 4px 4px 8px 3px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
 }
 .container3 {
@@ -125,6 +142,7 @@ h1 {
   margin-top: 5rem;
 }
 .cardmain {
+  cursor: pointer;
   background: #ffffff;
   box-shadow: 4px 4px 8px 3px rgba(0, 0, 0, 0.1);
   border-radius: 20px;
@@ -136,6 +154,11 @@ h1 {
   margin-right: 2rem;
   margin-bottom: 2rem;
   align-items: center;
+  border: 2px solid transparent ;
+}
+.cardmain:hover {
+  border: 2px solid #a463f8;
+  box-shadow: 1px 1px 20px 1px #a463f8;
 }
 .cardmain img {
   height: 4rem;
@@ -166,15 +189,16 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   place-content: space-around;
+  gap: 2rem 0rem;
   max-width: 52rem;
   align-self: center;
 }
 .cardicon {
+  cursor: pointer;
   max-width: 15rem;
-  margin-right: 2rem;
-  margin-bottom: 2rem;
   display: flex;
   flex-direction: column;
+  gap: 1rem;
 }
 .cardicon > img {
   border-radius: 20px;
@@ -186,7 +210,7 @@ h1 {
 .cardicon > :nth-child(2)::after {
   content: "";
   display: block;
-  width: 50%;
+  width: 40%;
   height: 2px;
   background: #7e1cfe;
   transition: width 0.3s;
@@ -207,11 +231,18 @@ h1 {
   border-radius: 20px;
   padding: 1rem;
   margin-right: 0.2rem;
+  box-sizing: border-box;
+}
+.container6 > :nth-child(2) > :nth-child(1):focus {
+  box-shadow: 1px 1px 5px 1px #a463f8;
 }
 .container6 > :nth-child(2) > :nth-child(2) {
   border: 1px solid #754de8;
   border-radius: 20px;
   padding: 1rem;
+}
+.container6 > :nth-child(2) > :nth-child(2):focus {
+  box-shadow: 1px 1px 5px 1px #a463f8;
 }
 .container6 > :nth-child(4) {
   margin: 1rem 0rem;
@@ -279,6 +310,7 @@ footer {
 }
 .socialIcon {
   height: 1.5rem;
+  cursor: pointer;
   width: 1.5rem;
 }
 @media screen and (max-width: 900px) {
@@ -312,7 +344,7 @@ footer {
     padding: 0rem 0.5rem;
   }
   .vedioPlayer {
-    width:100%;
+    width: 100%;
   }
   .cardmain {
     margin-right: 0rem;
