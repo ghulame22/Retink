@@ -1,16 +1,30 @@
+import { useState } from "react";
 import "./App.css";
 import Card from "./component/Card";
 import Card2 from "./component/Card2";
 import FormInput from "./component/FormInput";
 import NotifyBtn from "./component/NotifyBtn";
 import SignUpBtn from "./component/SignUpBtn";
+import VedioPlayer from "./component/VedioPlayer";
+import CardApi from "./component/CardApi";
+import Card2Api from "./component/Card2Api";
 
 function App() {
+  const [cardApi] = useState(CardApi);
+  const [card2Api] = useState(Card2Api);
+
   return (
     <>
+      <header>
+        <img
+          className="logo"
+          id="mainLogo"
+          src="Logoretinklogo.svg"
+          alt="Logo"
+        />
+      </header>
       <main className="main">
         <div className="container1">
-          <img className="logo" src="Logoretinklogo.svg" alt="Logo" />
           <h1>Get Advanced AI + Expert Created</h1>
           <img className="logo2" src="Retink-avatar (1) 1mainlogo.svg" alt="" />
           <div className="content1">
@@ -35,15 +49,13 @@ function App() {
 
         <div className="container2 titleOfContainer">
           <span>EXPLAINER VIDEO</span>
-          <div className="vedioPlayer"></div>
+          <VedioPlayer embedId="u1wprFtkMLg" />
         </div>
 
         <div className="container3">
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
+          {cardApi.map((item, index) => (
+            <Card key={index} cardApi={item} />
+          ))}
         </div>
         <div className="container4">
           <span className="titleOfContainer">
@@ -66,12 +78,10 @@ function App() {
           </span>
         </div>
         <div className="container5">
-          <Card2 />
-          <Card2 />
-          <Card2 />
-          <Card2 />
-          <Card2 />
-          <Card2 />
+        {card2Api.map((item, index) => (
+            <Card2 key={index} card2Api={item} />
+          ))}
+          
         </div>
         <div className="container6">
           <span className="titleOfContainer">
@@ -101,15 +111,39 @@ function App() {
             </div>
           </div>
           <div>
-          <span>Connect with Us</span>
-          <div>
-          <img className="socialIcon" src="Facebook - Original.svg" alt="Facebook Logo" />
-          <img className="socialIcon" src="Twitter - Original.svg" alt="Twitter Logo" />
-          <img className="socialIcon" src="Group 20963Instagram.svg" alt="Twitter Logo" />
-          <img className="socialIcon" src="LinkedIn - Originalsocial-media.svg" alt="Twitter Logo" />
-          <img className="socialIcon" src="YouTube - Original.svg" alt="YouTube Logo" />
-          <img className="socialIcon" src="Pinterest - Originalsocial-media.svg" alt="Twitter Logo" />
-          </div>
+            <span>Connect with Us</span>
+            <div>
+              <img
+                className="socialIcon"
+                src="Facebook - Original.svg"
+                alt="Facebook Logo"
+              />
+              <img
+                className="socialIcon"
+                src="Twitter - Original.svg"
+                alt="Twitter Logo"
+              />
+              <img
+                className="socialIcon"
+                src="Group 20963Instagram.svg"
+                alt="Twitter Logo"
+              />
+              <img
+                className="socialIcon"
+                src="LinkedIn - Originalsocial-media.svg"
+                alt="Twitter Logo"
+              />
+              <img
+                className="socialIcon"
+                src="YouTube - Original.svg"
+                alt="YouTube Logo"
+              />
+              <img
+                className="socialIcon"
+                src="Pinterest - Originalsocial-media.svg"
+                alt="Twitter Logo"
+              />
+            </div>
           </div>
         </div>
         <div className="secondFooter">

@@ -1,13 +1,12 @@
 import React from "react";
 
-function Card2() {
+function Card2({ card2Api }) {
   return (
     <div className="cardicon">
-      <img src="unsplash_HOrhCnQsxnQ.jpg" alt="icon2" />
-      <span>Blog Writing</span>
+      <img src={card2Api?.firstContent} />
+      <span>{card2Api?.secondContent}</span>
       <span>
-        Have a unique & creative logo designed to express and represent your
-        brand identity.
+      {card2Api?.thirdContent}
       </span>
     </div>
   );
