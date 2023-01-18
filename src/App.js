@@ -25,7 +25,11 @@ function App() {
       </header>
       <main className="main">
         <div className="container1">
-          <h1>Get Advanced AI + Expert Created</h1>
+          <div>
+            <span>
+              Get Advanced AI + Expert Created <span>Logo</span>
+            </span>
+          </div>
           <img className="logo2" src="Retink-avatar (1) 1mainlogo.svg" alt="" />
           <div className="content1">
             <span>
@@ -78,10 +82,9 @@ function App() {
           </span>
         </div>
         <div className="container5">
-        {card2Api.map((item, index) => (
+          {card2Api.map((item, index) => (
             <Card2 key={index} card2Api={item} />
           ))}
-          
         </div>
         <div className="container6">
           <span className="titleOfContainer">

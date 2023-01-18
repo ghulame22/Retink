@@ -26,10 +26,12 @@ body {
 #mainLogo {
   padding-left: 4rem;
 }
-h1 {
-  width: 342px;
-  height: 120px;
+.container1 > :nth-child(1) {
+  max-width: 442px;
   margin: 3rem 0rem;
+}
+.container1 > :nth-child(1) > :nth-child(1) {
+  height: 120px;
   font-family: "Poppins";
   font-style: normal;
   font-weight: 700;
@@ -38,13 +40,19 @@ h1 {
   color: #323232;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
+.container1 > :nth-child(1) > :nth-child(1) > :nth-child(1) {
+  color: #7e1cfe;
+}
 .logo2 {
   position: absolute;
   width: 610px;
   height: 783px;
   z-index: -1;
+  /* left: 562px; */
   right: 1px;
-  top: -100px;
+  top: -130px;
+  animation: Logo2Animation 3s infinite;
+  animation-direction: alternate;
 }
 .content1 {
   margin-top: -1rem;
@@ -129,7 +137,7 @@ h1 {
   line-height: 170%;
 }
 .vedioPlayer {
-  width: 50%;
+  width: 68%;
   height: 415px;
   margin-top: 77px;
   box-shadow: 4px 4px 8px 3px rgba(0, 0, 0, 0.1);
@@ -154,7 +162,7 @@ h1 {
   margin-right: 2rem;
   margin-bottom: 2rem;
   align-items: center;
-  border: 2px solid transparent ;
+  border: 2px solid transparent;
 }
 .cardmain:hover {
   border: 2px solid #a463f8;
@@ -323,7 +331,7 @@ footer {
   #mainLogo {
     padding-left: 1rem;
   }
-  h1 {
+  .container1 > :nth-child(1) {
     margin: 0rem 0rem 1rem;
     width: fit-content;
     height: fit-content;
@@ -344,7 +352,7 @@ footer {
     padding: 0rem 0.5rem;
   }
   .vedioPlayer {
-    width: 100%;
+    width: 90%;
   }
   .cardmain {
     margin-right: 0rem;
@@ -374,4 +382,8 @@ footer {
     width: 100vw;
     flex-direction: column;
   }
+}
+@keyframes Logo2Animation {
+  0%   { right: 1px; top: -130px;}
+  100%   { right: 1px; top: -50px;}
 }
